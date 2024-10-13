@@ -26,7 +26,7 @@ local function accept(item)
     text_edits_lib.apply_text_edits(item.client_id, { temp_text_edit })
 
     -- Expand the snippet
-    vim.snippet.expand(item.textEdit.newText)
+    require("blink.cmp.config").snippet_expand(item.textEdit.newText)
 
     -- OR Normal: Apply the text edit and move the cursor
   else

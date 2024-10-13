@@ -133,6 +133,7 @@
 --- @field highlight? blink.cmp.HighlightConfig
 --- @field nerd_font_variant? 'mono' | 'normal'
 --- @field kind_icons? table<string, string>
+--- @field snippet_expand? fun(input: string)
 
 --- @type blink.cmp.Config
 local config = {
@@ -305,6 +306,8 @@ local config = {
   -- set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
   -- adjusts spacing to ensure icons are aligned
   nerd_font_variant = 'normal',
+
+  snippet_expand = vim.snippet.expand,
 
   kind_icons = {
     Text = '󰉿',
